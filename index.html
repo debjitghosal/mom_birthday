@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Ma ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- FX layers -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- Floating emojis -->
+  <div id="floatLayer" class="floatLayer" aria-hidden="true"></div>
+
+  <!-- Fireworks canvas -->
+  <canvas id="fxCanvas" class="fxCanvas" aria-hidden="true"></canvas>
+
+  <!-- Start overlay: candle ritual -->
+  <div id="startOverlay" class="startOverlay">
+    <div class="startCard">
+      <div class="badge">CINEMATIC MEMORIES</div>
+      <h1>Happy Birthday, Ma ❤️</h1>
+
+      <div class="candleStage">
+        <div class="candleWrap">
+          <div id="flame" class="flame" aria-hidden="true"></div>
+          <div class="wick" aria-hidden="true"></div>
+          <div class="candle" aria-hidden="true"></div>
+        </div>
+
+        <div class="blowText" id="blowText">Blow the candle ❤️</div>
+
+        <div class="holdBar">
+          <div id="holdFill" class="holdFill"></div>
+        </div>
+
+        <button id="blowBtn" class="blowBtn" aria-label="Hold to blow the candle">
+          Hold to Blow 🌬️
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Minimal controls -->
+  <header class="hud">
+    <div class="hudLeft">
+      <span class="hudDot"></span>
+      <span class="hudText" id="hudText">Ready…</span>
+    </div>
+    <div class="hudRight">
+      <button id="prevBtn" class="btn ghost" title="Previous">←</button>
+      <button id="pauseBtn" class="btn ghost" title="Pause/Play">Pause</button>
+      <button id="nextBtn" class="btn ghost" title="Next">→</button>
+      <button id="muteBtn" class="btn ghost" title="Mute/Unmute">Mute</button>
+    </div>
+  </header>
+
+  <!-- Movie stage -->
+  <main class="stage">
+    <section id="slideA" class="slide active">
+      <img id="imgA" alt="Memory A" />
+      <div class="lowerText">
+        <div id="titleA" class="title"></div>
+        <div class="quoteLine">
+          <div id="quoteA" class="quote"></div>
+          <div id="cursorA" class="cursor">▌</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="slideB" class="slide">
+      <img id="imgB" alt="Memory B" />
+      <div class="lowerText">
+        <div id="titleB" class="title"></div>
+        <div class="quoteLine">
+          <div id="quoteB" class="quote"></div>
+          <div id="cursorB" class="cursor">▌</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ending screen -->
+    <section id="ending" class="ending hidden">
+      <div class="endingCard">
+        <div class="badge">THE END</div>
+        <h2>Ma, you’re my forever home.</h2>
+        <p>
+          Thank you for every sacrifice.<br/>
+          Thank you for believing in me.<br/>
+          You’re the best mom… and the most truthful person I know.
+        </p>
+        <div class="sig">— Love, your son ❤️</div>
+        <div class="endActions">
+          <button id="replayBtn" class="btn primary">Replay</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="progress">
+      <div class="bar"><div id="barFill"></div></div>
+      <div class="count" id="countText">1 / 14</div>
+    </div>
+  </main>
+
+  <!-- Music starts ONLY after candle + fireworks -->
+  <audio id="bgm" src="music.mp3" preload="auto"></audio>
+
+  <script src="app.js"></script>
+</body>
+</html>
