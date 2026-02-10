@@ -30,22 +30,6 @@ Live Site:
 
 ---
 
-## 📁 Project Structure
-
-.
-├── index.html
-├── style.css
-├── app.js
-├── music.mp3
-└── photos/
-├── img1.jpeg
-├── ...
-└── img14.jpeg
-
-
-
----
-
 ## 🚀 Deployment
 
 Deployed on Netlify.
